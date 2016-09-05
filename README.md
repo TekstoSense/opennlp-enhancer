@@ -1,10 +1,23 @@
-# opennlp-enhancer
+# Opennlp Enhancer
 
-opennlp-enhancer is an extended framework for opennlp to enhance its performance. The two main fetures of opennlp-enhancer are `**Extended Named Entity**` and `**Memory Optimization**`.
+opennlp-enhancer is an extended framework of NLP(Natural Language Processing) to enhance its performance. It extensively supports **Named Entity** extraction and **Memory Optimization** by extending [opennlp](https://opennlp.apache.org/) framweork.
 
 ## Features
 
-- Extensive Named Entity Identifier : Generally opennlp supports 
+1. Memory Optimization 
+2. Extensive Named Entity support 
+⋅⋅* Organisation
+..* Company
+..* Educational Institution
+..* Person
+..* Place
+..* Anatomical Structure
+..* Books
+..* Album
+..* Species
+..* Disease
+..* Airlines
+..* Sports
 
 ## Dependency
 
