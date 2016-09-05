@@ -1,6 +1,6 @@
 # opennlp-enhancer
 
-opennlp-enhancer is an extended framework for opennlp to enhance its performance.
+opennlp-enhancer is an extended framework for opennlp to enhance its performance. The two main fetures of opennlp-enhancer are `**Extended Named Entity**` and `**Memory Optimization**`.
 
 ## Features
 
