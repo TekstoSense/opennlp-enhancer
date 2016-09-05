@@ -5,7 +5,7 @@ opennlp-enhancer is an extended framework of NLP(Natural Language Processing) to
 ## Features
 
 1. Memory Optimization 
-   You can have properly indented paragraphs within list items.
+   ... You can have properly indented paragraphs within list items.
 2. Extensive Named Entity support 
    * Organisation
    * Company
