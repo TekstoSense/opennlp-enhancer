@@ -6,18 +6,19 @@ opennlp-enhancer is an extended framework of NLP(Natural Language Processing) to
 
 1. Memory Optimization 
 2. Extensive Named Entity support 
-⋅⋅ * Organisation
-.. *Company
-..* Educational Institution
-..* Person
-..* Place
-..* Anatomical Structure
-..* Books
-..* Album
-..* Species
-..* Disease
-..* Airlines
-..* Sports
+   * Organisation
+   * Company
+   * Educational Institution
+   * Person
+   * Place
+   * Anatomical Structure
+   * Books
+   * Album
+   * Species
+   * Disease
+   * Airlines
+   * Sports
+   * Drug
 
 ## Dependency
 
