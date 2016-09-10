@@ -9,19 +9,27 @@ opennlp-enhancer is an extended framework of NLP(Natural Language Processing) to
    opennlp-enhancer reduces the size of models loaded into memory by 1/4th of it size. It also uses L-BFGS algorithm to train models and hence it takes less time to converge and it also reduces the size of models. Hence opennlp-enhancer optimizes the memory by doublefold. You can have properly indented paragraphs within list items.
 
 2. Extensive Named Entity support 
-   * Organisation
+   * Airline
+   * Album
+   * Anatomical Structure
+   * Book
+   * Broadcast
+   * ChemicalCompound
    * Company
-   * Educational Institution
+   * Disease
+   * Drug
+   * EducationalInstitution
+   * Film
+   * Magazine
+   * Newspaper
+   * Non-ProfitOrganisation
+   * Organisation
    * Person
    * Place
-   * Anatomical Structure
-   * Books
-   * Album
+   * Plant
+   * Software
    * Species
-   * Disease
-   * Airlines
-   * Sports
-   * Drug
+   * Sport
 
 ## Dependency
 
