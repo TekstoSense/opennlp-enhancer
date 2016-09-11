@@ -10,6 +10,8 @@ opennlp-enhancer is an extended framework of NLP(Natural Language Processing) to
 
 2. **Extensive Named Entity support**
 
+   It supports extensive set of free to use openNLP based models. All these models are trained using both "Maxent" and "L-BFGS" based algorithms. We have deployed all L-BFGS based models for your use in our [**demo**](http://apis.tekstosense.com) site. It takes less memory space(reduced by 1/4) than "Maxent" based model.  
+   
    * Airline
    * Album
    * Anatomical Structure
