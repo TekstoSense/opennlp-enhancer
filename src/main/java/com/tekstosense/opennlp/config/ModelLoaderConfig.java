@@ -39,6 +39,9 @@ public class ModelLoaderConfig {
 
 	
 	private static final Logger LOG = LogManager.getLogger(ModelLoaderConfig.class);
+	private static final String MODELS = "Models";
+	private static final String MODELPATH = "ModelPath";
+	
 	/**
 	 * Gets the model names.
 	 *
@@ -46,7 +49,7 @@ public class ModelLoaderConfig {
 	 */
 	// private static final
 	private static String[] getModelNames() {
-		return getConfiguration().getString("Models").split("\\|");
+		return getConfiguration().getString(MODELS).split("\\|");
 	}
 
 	/**
@@ -55,7 +58,48 @@ public class ModelLoaderConfig {
 	 * @return the models
 	 */
 	public static String[] getModels() {
-		File dir = new File(Config.getConfiguration().getString("ModelPath"));
+		File dir = new File(Config.getConfiguration().getString(MODELPATH));
+
+		LOG.info("Loading Models from... " + dir.getAbsolutePath());
+		List<String> models = new ArrayList<>();
+		String[] modelNames = getModelNames();
+
+		List<String> wildCardPath = Arrays.stream(modelNames).map(model -> {
+			return "en-ner-" + model + "*.bin";
+		}).collect(Collectors.toList());
+
+		FileFilter fileFilter = new WildcardFileFilter(wildCardPath,
+				IOCase.INSENSITIVE);
+		List<String> filePath = Arrays.asList(dir.listFiles(fileFilter))
+				.stream().map(file -> file.getAbsolutePath())
+				.collect(Collectors.toList());
+		return filePath.toArray(new String[filePath.size()]);
+	}
+
+	public static String[] getModels(String[] modelNames) {
+		File dir = new File(Config.getConfiguration().getString(MODELPATH));
+		LOG.info("Loading Models from... " + dir.getAbsolutePath());
+
+		List<String> wildCardPath = Arrays.stream(modelNames).map(model -> {
+			return "en-ner-" + model + "*.bin";
+		}).collect(Collectors.toList());
+
+		FileFilter fileFilter = new WildcardFileFilter(wildCardPath,
+				IOCase.INSENSITIVE);
+		List<String> filePath = Arrays.asList(dir.listFiles(fileFilter))
+				.stream().map(file -> file.getAbsolutePath())
+				.collect(Collectors.toList());
+		return filePath.toArray(new String[filePath.size()]);
+	}
+	
+	/**
+	 * Gets the models. This method is used if ModelPath is passed as parameter.
+	 * 
+	 *
+	 * @return the models
+	 */
+	public static String[] getModels(String modelDirectory) {
+		File dir = new File(modelDirectory);
 
 		LOG.info("Loading Models from... " + dir.getAbsolutePath());
 		List<String> models = new ArrayList<>();

@@ -16,12 +16,16 @@
 package com.tekstosense.opennlp.namefinder;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
+import com.google.common.collect.ImmutableList;
 import com.google.common.collect.Multimap;
 import com.tekstosense.opennlp.config.ModelLoaderConfig;
 import com.tekstosense.opennlp.namefinder.OpenNLPEntityTagger;
@@ -53,12 +57,24 @@ public class EntityTaggerTest {
 	 * @throws IOException Signals that an I/O exception has occurred.
 	 */
 	public static void main(String[] args) throws IOException {
+		
+		//String[] models = ModelLoaderConfig.getModels("/home/biginfolabs/nitin/nitin-bckup/nitin/workspace/bil-text-analyser/bil-text-named-entity/src/main/resources/trainingset/");
 		String[] models = ModelLoaderConfig.getModels();
 		OpenNLPEntityTagger entityTagger = new OpenNLPEntityTagger();
 		entityTagger.loadModels(models);
-		String result = entityTagger.getTextWithTag(TEXT);
-		System.out.println(result);
-	}
+		
+		//String result = entityTagger.getTextWithTag(TEXT);
+		//System.out.println(result);
+		Multimap<String, String> multimap = entityTagger.getEntityWithText(TEXT);
+	
+		// System.out.println(entityTagger.getEntityWithText(TEXT).get("Organisation"));
+		 
+		 for(String key:multimap.keySet()){
+	         System.out.println("key :"+key);
+	         System.out.println("values :"+ multimap.get(key));
+	      }
+
+		}
 
 	/**
 	 * Sets the up.
