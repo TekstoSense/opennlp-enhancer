@@ -6,7 +6,7 @@
 	<version>2.0.0</version>
 	<name>OpenNLP Enhancer</name>
 	<description>OpenNLP Natural Language Processing Framework Engine</description>
-	
+
 	<properties>
 		<opennlp.version>1.6.0</opennlp.version>
 		<log4j.version>2.6.2</log4j.version>
@@ -60,16 +60,16 @@
 			<artifactId>guava</artifactId>
 			<version>${guava.version}</version>
 		</dependency>
-		
+
 		<!-- JUnit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>${junit.version}</version>
 		</dependency>
-		
+
 	</dependencies>
-		<build>
+	<build>
 		<plugins>
 			<plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -80,8 +80,18 @@
 					<encoding>UTF-8</encoding>
 				</configuration>
 			</plugin>
+
 			<plugin>
 				<artifactId>maven-assembly-plugin</artifactId>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<goals>
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
+
 				<configuration>
 					<archive>
 						<manifest>
