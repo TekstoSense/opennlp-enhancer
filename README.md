@@ -17,15 +17,15 @@ opennlp-enhancer is an extended framework of NLP(Natural Language Processing) to
    * Anatomical Structure
    * Book
    * Broadcast
-   * ChemicalCompound
+   * Chemical Compound
    * Company
    * Disease
    * Drug
-   * EducationalInstitution
+   * Educational Institution
    * Film
    * Magazine
    * Newspaper
-   * Non-ProfitOrganisation
+   * Non-Profit Organisation
    * Organisation
    * Person
    * Place
